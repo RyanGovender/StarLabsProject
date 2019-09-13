@@ -10,10 +10,7 @@ namespace StarLabsProject.Models
     public class TShirt:Products
     {
         public TShirt()
-        {
-            Name = null;
-            Size = null;
-            Price = 0.00;
+        {    
             Type = "tshirt";
         }
 

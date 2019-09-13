@@ -10,9 +10,6 @@ namespace StarLabsProject.Models
     {
         public Jeans()
         {
-            Name = null;
-            Size = null;
-            Price = 0.00;
             Type = "jeans";
         }
         public override double getFinalPrice(string Size)

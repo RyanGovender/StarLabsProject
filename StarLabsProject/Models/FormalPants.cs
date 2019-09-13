@@ -10,9 +10,6 @@ namespace StarLabsProject.Models
     {
         public FormalPants()
         {
-            Name = null;
-            Size = null;
-            Price = 0.00;
             Type = "formalpants";
         }
         public override double getFinalPrice(string Size)
