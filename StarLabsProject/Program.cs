@@ -16,18 +16,22 @@ namespace StarLabsProject
             shirt.Name = "Dc Shirt";
             shirt.Size = "m";
             basket.shirts.Add(shirt);
+
             var golfer= new Golfer();
             golfer.Name = "Old Khaki Golfer";
             golfer.Size = "l";
             basket.shirts.Add(golfer);
+
             var jeans= new Jeans();
             jeans.Name = "Levis Jeans";
             jeans.Size = "s";
             basket.pants.Add(jeans);
+
             var formalpants= new FormalPants();
             formalpants.Name = "Formal Pants";
             formalpants.Size = "m";
             basket.pants.Add(formalpants);
+
             Console.WriteLine($"Your total price is {basket.GetTotalPrice()}");
             Console.ReadKey();
 

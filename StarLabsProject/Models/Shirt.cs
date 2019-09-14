@@ -12,28 +12,18 @@ namespace StarLabsProject.Models
         {
             return GetDefaultPrice(Size);
         }
-
-        public double GetGolferPrice(string size)
-        {
-            return getFinalPrice(size) * 2;
-        }
     }
     
     public class TShirt:Shirt
     {
-        public TShirt()
-        {    
-            Type = "tshirt";
-        
-        }
-
+     
     }
     public class Golfer : Shirt
     {
-        public Golfer()
+     
+        public override double getFinalPrice(string Size)
         {
-            Type = "Golfer";
+            return GetDefaultPrice(size: Size)*2;
         }
-       
     }
 }

@@ -10,7 +10,7 @@ namespace StarLabsProject.Models
     {
         public  List<Products> shirts= new List<Products>();
         public List<Products> pants = new List<Products>();
-        Shirt shirt= new Shirt();
+        private Shirt shirt= new Shirt();
         private Pants jeans = new Pants();
         
 
@@ -20,8 +20,8 @@ namespace StarLabsProject.Models
             var totalcost = 0.00;
             foreach (var item in shirts)
             {
-                if (item.Type.Equals("tshirt"))totalcost += shirt.getFinalPrice(item.Size);
-                else if(item.Type.Equals("Golfer")) totalcost += shirt.GetGolferPrice(item.Size);
+               
+                totalcost += item.getFinalPrice(item.Size);
             }
            
             return totalcost;
@@ -32,8 +32,7 @@ namespace StarLabsProject.Models
             var totalcost = 0.00;
             foreach (var item in pants)
             {
-                if (item.Type.Equals("jeans")) totalcost += jeans.getFinalPrice(item.Size);
-                else if(item.Type.Equals("formalpants"))totalcost += jeans.FormalPants(item.Size);  
+                totalcost += item.getFinalPrice(item.Size);
             }
 
             return totalcost;

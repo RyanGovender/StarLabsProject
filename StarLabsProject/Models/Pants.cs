@@ -13,24 +13,18 @@ namespace StarLabsProject.Models
             return GetDefaultPrice(Size);
         }
 
-        public double FormalPants(string size)
-        {
-            return getFinalPrice(size) + 30;
-        }
+     
     }
    public  class Jeans:Pants
     {
-        public Jeans()
-        {
-            Type = "jeans";
-        }
+       
 
     }
    public class FormalPants : Pants
-   {
-       public FormalPants()
-       {
-           Type = "formalpants";
-       }
-   }
+    {
+        public override double getFinalPrice(string Size)
+        {
+            return GetDefaultPrice(Size)+30;
+        }
+    }
 }
