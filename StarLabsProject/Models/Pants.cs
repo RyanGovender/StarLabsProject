@@ -8,9 +8,9 @@ namespace StarLabsProject.Models
 {
     public class Pants : Products
     {
-        public override double getFinalPrice(string Size)
+        public override double getFinalPrice(string size)
         {
-            return GetDefaultPrice(Size);
+            return GetDefaultPrice(size);
         }
 
      
@@ -22,9 +22,9 @@ namespace StarLabsProject.Models
     }
    public class FormalPants : Pants
     {
-        public override double getFinalPrice(string Size)
+        public override double getFinalPrice(string size)
         {
-            return GetDefaultPrice(Size)+30;
+            return GetDefaultPrice(size)+30;
         }
     }
 }

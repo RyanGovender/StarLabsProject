@@ -17,6 +17,6 @@ namespace StarLabsProject.Models
             return size.Equals("m") ? 20 : 30;
         }
 
-        public abstract double getFinalPrice(string Size);
+        public abstract double getFinalPrice(string size);
     }
 }

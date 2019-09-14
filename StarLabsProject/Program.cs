@@ -32,6 +32,7 @@ namespace StarLabsProject
             formalpants.Size = "m";
             basket.pants.Add(formalpants);
 
+
             Console.WriteLine($"Your total price is {basket.GetTotalPrice()}");
             Console.ReadKey();
 
