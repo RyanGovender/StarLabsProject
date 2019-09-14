@@ -10,26 +10,18 @@ namespace StarLabsProject.Models
     {
         public  List<Products> shirts= new List<Products>();
         public List<Products> pants = new List<Products>();
-        TShirt shirt= new TShirt();
-        FormalPants fpants= new FormalPants();
-        Jeans jeans = new Jeans();
-        Golfer golfer = new Golfer();
+        Shirt shirt= new Shirt();
+        private Pants jeans = new Pants();
+        
 
-
-
+   
         private  double CalculateShirtPrice()
         {
             var totalcost = 0.00;
             foreach (var item in shirts)
             {
-                if (item.Type.Equals("tshirt"))
-                {
-                    totalcost += shirt.getFinalPrice(item.Size);
-                }
-                else
-                {
-                    totalcost += golfer.getFinalPrice(item.Size);
-                }
+                if (item.Type.Equals("tshirt"))totalcost += shirt.getFinalPrice(item.Size);
+                else if(item.Type.Equals("Golfer")) totalcost += shirt.GetGolferPrice(item.Size);
             }
            
             return totalcost;
@@ -40,14 +32,8 @@ namespace StarLabsProject.Models
             var totalcost = 0.00;
             foreach (var item in pants)
             {
-                if (item.Type.Equals("jeans"))
-                {
-                    totalcost += jeans.getFinalPrice(item.Size);
-                }
-                else
-                {
-                    totalcost += fpants.getFinalPrice(item.Size);
-                }
+                if (item.Type.Equals("jeans")) totalcost += jeans.getFinalPrice(item.Size);
+                else if(item.Type.Equals("formalpants"))totalcost += jeans.FormalPants(item.Size);  
             }
 
             return totalcost;

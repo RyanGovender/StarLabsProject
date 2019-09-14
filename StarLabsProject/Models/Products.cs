@@ -10,8 +10,8 @@ namespace StarLabsProject.Models
     {
         public string Name;
         public string Size;
-        public double Price;
         public string Type;
+        public double Price;
 
         public double GetDefaultPrice(string size)
         {

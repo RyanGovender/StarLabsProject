@@ -43,11 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\Basket.cs" />
-    <Compile Include="Models\FormalPants.cs" />
-    <Compile Include="Models\Golfer.cs" />
-    <Compile Include="Models\Jeans.cs" />
+    <Compile Include="Models\Pants.cs" />
     <Compile Include="Models\Products.cs" />
-    <Compile Include="Models\TShirt.cs" />
+    <Compile Include="Models\Shirt.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
